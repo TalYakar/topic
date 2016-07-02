@@ -29,16 +29,15 @@ def prob(l,j):
 
 
 # cl = cPickle.load(open( "clusters_2_.p", "rb" ))
-df_ = pd.DataFrame(columns=['cluster','template', 'length', 'params'])
-# df_params = pd.DataFrame(columns=['cluster','template', 'dict_length', 'params'])
+df_ = pd.DataFrame(columns=['cluster','template', 'cl_length', 'params'])
 df_params = pd.DataFrame(columns=['template', 'dict_length', 'params'])
 cl = cPickle.load(open( "results\clusters_failed_.p", "rb" ))
-
 # cl = cPickle.load(open( "data\clusters\clusters_build_AVP-nBVNePvB1HupEh-a_.p", "rb" ))
-batch, batch_, outcluster , templates, temp = [], [], [], [], []
+
+[batch, batch_, outcluster, templates, temp] = [], [], [], [], []
 for i, cluster in enumerate(cl[1:]):
     print
-    print  '---------------cluster' +str(i)+'_length_' + str(len(cluster))+'------------------------\n'
+    print  '---------------cluster' + str(i) +'_length_' + str(len(cluster))+'------------------------\n'
     batch_ = re.findall(r"[\w']+", cluster.logs[0])
     batch = np.array(cluster.logs[0].split())
     print cluster.logs[0].encode('utf-8')
@@ -79,20 +78,32 @@ for i, cluster in enumerate(cl[1:]):
                 df_params.loc[str(i) + '_' + str(j)+'_' + str(p)] = pd.Series(
                     dict( template=' '.join(template), dict_length=len(w_dict), params=w_dict))
                 p =+ 1
-
             else:
                 template.append(max(w_dict, key=w_dict.get))
-
-            # except:
-            #     pass
     print
     print  '---------------template' + str(i) + '_length_' + str(len(template)) + '------------------------\n'
     print (' '.join(template)).encode('utf-8')
-    df_.loc[str(i)] = pd.Series(dict(cluster=cluster.logs.ix[0].encode('utf-8'), template=' '.join(template), length=len(cluster), params = params))
+    df_.loc[str(i)] = pd.Series(dict(cluster=cluster.logs, template=' '.join(template), cl_length=len(cluster), params = params))
 
 cPickle.dump(cl, open("templates.p", "wb"))
-cPickle.dump(cl, open("outcluster.p", "wb"))
 df_.to_pickle('results/failed_clusters_templates_{0}.pkl'.format(len(cl)))
+
+if outcluster!=[]:
+    cPickle.dump(cl, open("outcluster.p", "wb"))
+
+#adding stat
+df_params['sum'] = [sum(df_params.params.ix[i].values()) for i in range(0, len(df_params))]
+df_params['prob'] = [df_params.params.ix[i].values() for i in range(0, len(df_params))]
+df_params['prob'] =[prob(l,j) for l, j in zip(df_params.prob, df_params['sum'])]
+df_params['diversity'] = [list(set(x.values())) for x in df_params.params]
+df_params['temp_len'] = [len(x.split()) for x in df_params.template]
+df_params.to_pickle('results/failed_clusters_params_{0}.pkl'.format(len(cl)))
+
+#outcluster
+for i, cluster in enumerate(outcluster):
+    print  '---------------outcluster' +str(i)+'_length_' + str(len(outcluster))+'------------------------\n'
+    for x_ in outcluster:
+        print x_.encode('utf-8')
 
     # cl[len(cl) + 1] = outcluster
 # for i in cl:
@@ -102,16 +113,3 @@ df_.to_pickle('results/failed_clusters_templates_{0}.pkl'.format(len(cl)))
     #     batch = batch + x_.split()
     # cluster_dict = Counter(batch)
     # temp_cl = [k for k,v in cluster_dict.iteritems() if v >= len(cluster)-1]
-
-# for i, cluster in enumerate(outcluster):
-#     print  '---------------outcluster' +str(i)+'_length_' + str(len(outcluster))+'------------------------\n'
-#     for x_ in outcluster:
-#         print x_.encode('utf-8')
-
-df_params['sum'] = [sum(df_params.params.ix[i].values()) for i in range(0, len(df_params))]
-df_params['prob'] = [df_params.params.ix[i].values() for i in range(0, len(df_params))]
-
-df_params['prob'] =[prob(l,j) for l, j in zip(df_params.prob, df_params['sum'])]
-df_params['diversity'] = [list(set(x.values())) for x in df_params.params]
-df_params['temp_len'] = [len(x.split()) for x in df_params.template]
-df_params.to_pickle('results/failed_clusters_params_{0}.pkl'.format(len(cl)))
