@@ -31,11 +31,12 @@ def prob(l,j):
 # cl = cPickle.load(open( "clusters_2_.p", "rb" ))
 df_ = pd.DataFrame(columns=['cluster','template', 'cl_length', 'params'])
 df_params = pd.DataFrame(columns=['template', 'dict_length', 'params'])
-cl = cPickle.load(open( "results\clusters_failed_.p", "rb" ))
+cl = cPickle.load(open("clusters_failed_16.p", "rb" ))
+
 # cl = cPickle.load(open( "data\clusters\clusters_build_AVP-nBVNePvB1HupEh-a_.p", "rb" ))
 
 [batch, batch_, outcluster, templates, temp] = [], [], [], [], []
-for i, cluster in enumerate(cl[1:]):
+for i, cluster in enumerate(cl):
     print
     print  '---------------cluster' + str(i) +'_length_' + str(len(cluster))+'------------------------\n'
     batch_ = re.findall(r"[\w']+", cluster.logs[0])
@@ -85,11 +86,12 @@ for i, cluster in enumerate(cl[1:]):
     print (' '.join(template)).encode('utf-8')
     df_.loc[str(i)] = pd.Series(dict(cluster=cluster.logs, template=' '.join(template), cl_length=len(cluster), params = params))
 
-cPickle.dump(cl, open("templates.p", "wb"))
+cPickle.dump(cl, open("results/templates.p", "wb"))
 df_.to_pickle('results/failed_clusters_templates_{0}.pkl'.format(len(cl)))
 
+
 if outcluster!=[]:
-    cPickle.dump(cl, open("outcluster.p", "wb"))
+    cPickle.dump(cl, open("results/outcluster.p", "wb"))
 
 #adding stat
 df_params['sum'] = [sum(df_params.params.ix[i].values()) for i in range(0, len(df_params))]
@@ -97,7 +99,7 @@ df_params['prob'] = [df_params.params.ix[i].values() for i in range(0, len(df_pa
 df_params['prob'] =[prob(l,j) for l, j in zip(df_params.prob, df_params['sum'])]
 df_params['diversity'] = [list(set(x.values())) for x in df_params.params]
 df_params['temp_len'] = [len(x.split()) for x in df_params.template]
-df_params.to_pickle('results/failed_clusters_params_{0}.pkl'.format(len(cl)))
+df_params.to_pickle('results/df_failed_clusters_params_{0}.pkl'.format(len(cl)))
 
 #outcluster
 for i, cluster in enumerate(outcluster):

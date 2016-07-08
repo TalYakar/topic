@@ -1,0 +1,215 @@
+
+---------------cluster0_length_4------------------------
+
+[INFO] mqm-infra-services-api ............................ SKIPPED
+[INFO] mqm-pa-mapper-test-api ............................ SKIPPED
+[INFO] mqm-elastic-infra-impl ............................ SKIPPED
+[INFO] ui-automation-services ............................ SKIPPED
+
+---------------template0_length_4------------------------
+
+[INFO] <p_4> ............................ SKIPPED
+
+---------------cluster1_length_5------------------------
+
+[INFO] mqm-distributed-cache-api ......................... SKIPPED
+[INFO] mqm-ps-business-rules-api ......................... SKIPPED
+[INFO] mqm-query-translation-api ......................... SKIPPED
+[INFO] mqm-generate-entities-api ......................... SKIPPED
+[INFO] mqm-schema-resources-impl ......................... SKIPPED
+
+---------------template1_length_4------------------------
+
+[INFO] <p_5> ......................... SKIPPED
+
+---------------cluster2_length_2------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar (52 KB at 3465.6 KB/sec)
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar (52 KB at 3249.0 KB/sec)
+
+---------------template2_length_7------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar (52 KB at <p_2> KB/sec)
+
+---------------cluster3_length_2------------------------
+
+[INFO] mqm-storage-api ................................... SKIPPED
+[INFO] mqm-search-impl ................................... SKIPPED
+
+---------------template3_length_4------------------------
+
+[INFO] <p_2> ................................... SKIPPED
+
+---------------cluster4_length_7------------------------
+
+[INFO] mqm-dal-db-infra-api .............................. SKIPPED
+[INFO] mqm-app-entities-api .............................. SKIPPED
+[INFO] mqm-ps-entities-impl .............................. SKIPPED
+[INFO] test-box-api-commons .............................. SKIPPED
+[INFO] mqm-bl-platform-impl .............................. SKIPPED
+[INFO] mqm-sbs-manager-impl .............................. SKIPPED
+[INFO] selenium-wrapper-api .............................. SKIPPED
+
+---------------template4_length_4------------------------
+
+[INFO] <p_7> .............................. SKIPPED
+
+---------------cluster5_length_2------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/easymock/easymock/3.3.1/easymock-3.3.1.jar (124 KB at 7275.2 KB/sec)
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/easymock/easymock/3.3.1/easymock-3.3.1.jar (124 KB at 7729.9 KB/sec)
+
+---------------template5_length_7------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/easymock/easymock/3.3.1/easymock-3.3.1.jar (124 KB at <p_2> KB/sec)
+
+---------------cluster6_length_6------------------------
+
+[INFO] test-box-service .................................. SKIPPED
+[INFO] mqm-storage-impl .................................. SKIPPED
+[INFO] mqm-install-impl .................................. SKIPPED
+[INFO] saas-portal-mock .................................. SKIPPED
+[INFO] selenium-wrapper .................................. SKIPPED
+[INFO] mqm-distribution .................................. SKIPPED
+
+---------------template6_length_4------------------------
+
+[INFO] <p_6> .................................. SKIPPED
+
+---------------cluster7_length_4------------------------
+
+[INFO] mqm-sync-impl ..................................... SKIPPED
+[INFO] test-box-rest ..................................... SKIPPED
+[INFO] mqm-saas-impl ..................................... SKIPPED
+[INFO] mqm-ui-helper ..................................... SKIPPED
+
+---------------template7_length_4------------------------
+
+[INFO] <p_4> ..................................... SKIPPED
+
+---------------cluster8_length_4------------------------
+
+[INFO] mqm-search-api .................................... SKIPPED
+[INFO] test-box-model .................................... SKIPPED
+[INFO] identifier-api .................................... SKIPPED
+[INFO] test-event-bus .................................... SKIPPED
+
+---------------template8_length_4------------------------
+
+[INFO] <p_4> .................................... SKIPPED
+
+---------------cluster9_length_2------------------------
+
+[INFO] mqm-bl-platform-br-plugin-impl .................... SKIPPED
+[INFO] mqm-translation-resources-impl .................... SKIPPED
+
+---------------template9_length_4------------------------
+
+[INFO] <p_2> .................... SKIPPED
+
+---------------cluster10_length_3------------------------
+
+[INFO] mqm-reporting-api ................................. SKIPPED
+[INFO] mqm-sanitize-impl ................................. SKIPPED
+[INFO] automation-common ................................. SKIPPED
+
+---------------template10_length_4------------------------
+
+[INFO] <p_3> ................................. SKIPPED
+
+---------------cluster11_length_2------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom (2 KB at 112.9 KB/sec)
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/apache/maven/maven-profile/2.0.4/maven-profile-2.0.4.pom (2 KB at 112.9 KB/sec)
+
+---------------template11_length_7------------------------
+
+Downloaded: <p_2> (2 KB at 112.9 KB/sec)
+
+---------------cluster12_length_5------------------------
+
+[INFO] mqm-ps-entity-model-api ........................... SKIPPED
+[INFO] mqm-tests-execution-api ........................... SKIPPED
+[INFO] mqm-infra-services-impl ........................... SKIPPED
+[INFO] test-box-ci-integration ........................... SKIPPED
+[INFO] ui-automation-framework ........................... SKIPPED
+
+---------------template12_length_4------------------------
+
+[INFO] <p_5> ........................... SKIPPED
+
+---------------cluster13_length_2------------------------
+
+[INFO] mqm-ps-platform-services-api ...................... SKIPPED
+[INFO] mqm-distributed-service-impl ...................... SKIPPED
+
+---------------template13_length_4------------------------
+
+[INFO] <p_2> ...................... SKIPPED
+
+---------------cluster14_length_2------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/objenesis/objenesis-parent/2.1/objenesis-parent-2.1.pom (17 KB at 1255.0 KB/sec)
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/objenesis/objenesis-parent/2.1/objenesis-parent-2.1.pom (17 KB at 1087.7 KB/sec)
+
+---------------template14_length_7------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/objenesis/objenesis-parent/2.1/objenesis-parent-2.1.pom (17 KB at <p_2> KB/sec)
+
+---------------cluster15_length_2------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/objenesis/objenesis/2.1/objenesis-2.1.jar (41 KB at 2912.6 KB/sec)
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/objenesis/objenesis/2.1/objenesis-2.1.jar (41 KB at 2038.8 KB/sec)
+
+---------------template15_length_7------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/objenesis/objenesis/2.1/objenesis-2.1.jar (41 KB at <p_2> KB/sec)
+
+---------------cluster16_length_5------------------------
+
+[INFO] mqm-elastic-infra-api ............................. SKIPPED
+[INFO] mqm-infra-server-impl ............................. SKIPPED
+[INFO] mqm-dal-db-infra-impl ............................. SKIPPED
+[INFO] mqm-rest-platform-api ............................. SKIPPED
+[INFO] test-box-test-support ............................. SKIPPED
+
+---------------template16_length_4------------------------
+
+[INFO] <p_5> ............................. SKIPPED
+
+---------------cluster17_length_2------------------------
+
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom (3 KB at 165.4 KB/sec)
+Downloaded: http://mydtbld0051.hpeswlab.net:8081/nexus/content/groups/mqm-public/org/apache/maven/maven-model/2.0.4/maven-model-2.0.4.pom (3 KB at 203.6 KB/sec)
+
+---------------template17_length_7------------------------
+
+Downloaded: <p_2> (3 KB at <p_2> KB/sec)
+
+---------------cluster18_length_3------------------------
+
+[INFO] mqm-saas-api ...................................... SKIPPED
+[INFO] mqm-sync-api ...................................... SKIPPED
+[INFO] test-box-dal ...................................... SKIPPED
+
+---------------template18_length_4------------------------
+
+[INFO] <p_3> ...................................... SKIPPED
+
+---------------cluster19_length_2------------------------
+
+[INFO] mqm-dal-db-entity-platform ........................ SKIPPED
+[INFO] mqm-app-production-modules ........................ SKIPPED
+
+---------------template19_length_4------------------------
+
+[INFO] <p_2> ........................ SKIPPED
+
+---------------cluster20_length_2------------------------
+
+[INFO] mqm-rest-infra-impl ............................... SKIPPED
+[INFO] mqm-trend-sync-impl ............................... SKIPPED
+
+---------------template20_length_4------------------------
+
+[INFO] <p_2> ............................... SKIPPED
